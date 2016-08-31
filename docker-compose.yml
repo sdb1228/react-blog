@@ -1,0 +1,9 @@
+web:
+  build: .
+  ports:
+    - "3000"
+  volumes:
+    - ".:/app/user"
+  environment:
+    VIRTUAL_HOST: reactblog.docker
+    NODE_ENV: development
