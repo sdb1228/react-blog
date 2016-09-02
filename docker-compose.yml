@@ -4,6 +4,14 @@ web:
     - "3000"
   volumes:
     - ".:/app/user"
+  links:
+    - postgres
   environment:
     VIRTUAL_HOST: reactblog.docker
     NODE_ENV: development
+postgres:
+  image: postgres
+  ports:
+    - "5432"
+  environment:
+    VIRTUAL_HOST: postgres.docker
